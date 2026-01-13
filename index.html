@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>espace Unit kit (espkit) - Demo</title>
+
+        <!-- espkit: CSSの読み込み -->
+        <link
+            rel="stylesheet"
+            href="espkit-v0.9.0-beta/espkit-all.min.css"
+        />
+
+        <!-- espkit: カスタム設定CSSの読み込み（カスタム設定を利用する場合） -->
+        <!-- <link
+            rel="stylesheet"
+            href="espkit-v1.00/espkit-custom-settings.css"
+        /> -->
+
+        <style>
+            /* デモページ用の簡易レイアウト調整（espkit本体には不要なスタイルです） */
+            body {
+                font-family: sans-serif;
+                line-height: 1.6;
+                color: #333;
+                margin: 0;
+                padding: 0;
+                background: #f9f9f9;
+            }
+            header {
+                background: #fff;
+                border-bottom: 1px solid #ddd;
+                padding: 2rem;
+                text-align: center;
+            }
+            section {
+                max-width: 1000px;
+                margin: 3rem auto;
+                padding: 0 1rem;
+            }
+            h2 {
+                border-left: 5px solid #d4d4d4;
+                padding-left: 10px;
+                margin-bottom: 1.5rem;
+            }
+            a.document {
+                font-size: 12px;
+            }
+            footer {
+                text-align: center;
+                padding: 2rem;
+                color: #777;
+                font-size: 0.9rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>espace Unit kit</h1>
+            <p>軽量で使いやすいWebユニットセット「espace Unit kit」のデモページです。</p>
+            <p>
+                <a
+                    href="https://espace-uk.i-ra.site"
+                    class="document"
+                    >espace Unit kit 公式サイト</a
+                >
+            </p>
+        </header>
+
+        <section>
+            <h2>
+                Common (汎用)
+                <a
+                    href="https://espace-uk.i-ra.site/docs/units/common"
+                    class="document"
+                    >公式ドキュメント</a
+                >
+            </h2>
+            <p class="espkit__font-size--sm"></p>
+
+            <div class="espkit__m-b--lg">
+                <p class="espkit__font-size--sm"><strong>Badges (バッジ)</strong></p>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap">
+                    <span class="espkit__badge">デフォルト</span>
+                    <span class="espkit__badge espkit__badge--main">メイン</span>
+                    <span class="espkit__badge espkit__badge--sub">サブ</span>
+                    <span class="espkit__badge espkit__badge--accent">アクセント</span>
+                </div>
+            </div>
+
+            <div class="espkit__m-b--lg">
+                <p class="espkit__font-size--sm"><strong>Buttons (ボタン)</strong></p>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center">
+                    <a class="espkit__btn">デフォルト</a>
+                    <a class="espkit__btn espkit__btn--main">メインボタン</a>
+                    <button class="espkit__btn espkit__btn--sub">サブボタン</button>
+                    <a class="espkit__btn espkit__btn--accent">アクセント</a>
+                    <a
+                        class="espkit__btn"
+                        aria-disabled="true"
+                        >無効状態</a
+                    >
+                </div>
+            </div>
+
+            <div class="espkit__m-b--lg">
+                <p class="espkit__font-size--sm">
+                    <strong>Decoration (文字装飾)</strong>
+                </p>
+                <p>
+                    文章の中の特定の語句を<span class="espkit__marker espkit__marker--main"
+                        >メインカラーのマーカー</span
+                    >で引いたり、
+                    <span class="espkit__marker espkit__marker--sub">サブカラー</span>、
+                    <span class="espkit__marker espkit__marker--accent">アクセントカラー</span
+                    >で強調できます。
+                </p>
+                <p>
+                    <span class="espkit__underline"
+                        >クラス <code>espkit__underline</code> を使った下線スタイル</span
+                    >
+                </p>
+            </div>
+
+            <div class="espkit__m-b--lg">
+                <p class="espkit__font-size--sm"><strong>Lists (リスト)</strong></p>
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                        gap: 20px;
+                    "
+                >
+                    <div>
+                        <p class="espkit__font-size--sm">Dot List</p>
+                        <ul>
+                            <li>項目A</li>
+                            <li>項目B</li>
+                            <li>項目C</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="espkit__font-size--sm">Number List</p>
+                        <ol>
+                            <li>項目A</li>
+                            <li>項目B</li>
+                            <li>項目C</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <p class="espkit__font-size--sm">Inline List</p>
+                        <ul class="espkit__list--inline">
+                            <li>項目A</li>
+                            <li>項目B</li>
+                            <li>項目C</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="espkit__m-b--lg">
+                <p class="espkit__font-size--sm"><strong>Definition List (データ・履歴)</strong></p>
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                        gap: 20px;
+                    "
+                >
+                    <div>
+                        <p class="espkit__font-size--sm">Data Style</p>
+                        <dl class="espkit__dl--data">
+                            <dt>更新日</dt>
+                            <dd>2026/01/13</dd>
+                            <dt>作成者</dt>
+                            <dd>XXX</dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <p class="espkit__font-size--sm">Number Style</p>
+                        <dl class="espkit__dl--num">
+                            <dt>項目A</dt>
+                            <dd>1,000</dd>
+                            <dt>項目B</dt>
+                            <dd>500</dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <p class="espkit__font-size--sm">History Style</p>
+                        <dl class="espkit__dl--history">
+                            <dt>2024.01</dt>
+                            <dd>Ver 1.0 リリース</dd>
+                            <dt>2025.01</dt>
+                            <dd>Ver 2.0 アップデート</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>
+                Card (カード)
+                <a
+                    href="https://espace-uk.i-ra.site/docs/units/card"
+                    class="document"
+                    >公式ドキュメント</a
+                >
+            </h2>
+            <div class="espkit__card--wrapper">
+                <!-- ▼ カードブロック ▼ -->
+                <div class="espkit__card">
+                    <div class="espkit__card--header">カードタイトル</div>
+                    <div>
+                        <p>ここにはカードのコンテンツが入ります。</p>
+                    </div>
+                </div>
+                <!-- ▲ カードブロック ▲ -->
+
+                <!-- ▼ カードブロック ▼ -->
+                <div class="espkit__card">
+                    <div class="espkit__card--header">
+                        <img
+                            src="https://images.unsplash.com/photo-1623334044303-241021148842?w=900"
+                        />
+                    </div>
+                </div>
+                <!-- ▲ カードブロック ▲ -->
+
+                <!-- ▼ カードブロック ▼ -->
+                <div class="espkit__card">
+                    <div class="espkit__card--header">
+                        <img
+                            src="https://images.unsplash.com/photo-1564327367919-cb377ea6a88f?w=900"
+                        />
+                    </div>
+                    <div>
+                        <p>ここにはカードのコンテンツが入ります。</p>
+                    </div>
+                </div>
+                <!-- ▲ カードブロック ▲ -->
+            </div>
+        </section>
+
+        <section>
+            <h2>
+                Profile (プロフィール)
+                <a
+                    href="https://espace-uk.i-ra.site/docs/units/profile"
+                    class="document"
+                    >公式ドキュメント</a
+                >
+            </h2>
+            <p class="espkit__font-size--sm">
+                <strong>User profile (ユーザプロフィール例)</strong>
+            </p>
+            <label class="espkit__underline">name: Rabi</label>
+            <div class="espkit__profile">
+                <!-- ▼ プロフィールブロック ▼ -->
+                <div>
+                    <div class="espkit__profile_image--icon">
+                        <img
+                            src="https://images.unsplash.com/photo-1638255402906-e838358069ab?w=900"
+                        />
+                    </div>
+                    <div>
+                        <dl class="espkit__dl--info">
+                            <dt>like</dt>
+                            <dd>コーヒーと読書</dd>
+                            <dt>hobby</dt>
+                            <dd>写真撮影</dd>
+                            <dt>sns</dt>
+                            <dd>・・・</dd>
+                        </dl>
+                        <div>
+                            <p>ここにはプロフィールのコンテンツが入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ▲ プロフィールブロック ▲ -->
+            </div>
+
+            <p class="espkit__font-size--sm">
+                <strong>Character profile (キャラクタープロフィール例)</strong>
+            </p>
+            <div class="espkit__profile espkit__profile--grid">
+                <!-- ▼ プロフィールブロック ▼ -->
+                <div>
+                    <div class="espkit__profile_image--character">
+                        <img
+                            src="https://images.unsplash.com/vector-1747938771047-838174c62c52?w=900"
+                        />
+                    </div>
+                    <div>
+                        <dl class="espkit__dl--info">
+                            <dt>name</dt>
+                            <dd>ペンギン</dd>
+                        </dl>
+                        <dl class="espkit__dl--num espkit__m-bs--lg">
+                            <dt>STR</dt>
+                            <dd>10</dd>
+                            <dt>CON</dt>
+                            <dd>11</dd>
+                            <dt>POW</dt>
+                            <dd>15</dd>
+                            <dt>DEX</dt>
+                            <dd>13</dd>
+                            <dt>APP</dt>
+                            <dd>14</dd>
+                            <dt>SIZ</dt>
+                            <dd>9</dd>
+                            <dt>INT</dt>
+                            <dd>14</dd>
+                            <dt>EDU</dt>
+                            <dd>12</dd>
+                        </dl>
+                        <dl class="espkit__dl--num espkit__m-bs--lg">
+                            <dt>HP</dt>
+                            <dd>10</dd>
+                            <dt>MP</dt>
+                            <dd>15</dd>
+                            <dt>SAN</dt>
+                            <dd>75 / 75</dd>
+                        </dl>
+                        <dl class="espkit__dl--num espkit__m-bs--lg">
+                            <dt>アイデア</dt>
+                            <dd>70</dd>
+                            <dt>幸運</dt>
+                            <dd>75</dd>
+                            <dt>知識</dt>
+                            <dd>60</dd>
+                        </dl>
+                        <ul class="espkit__list--inline">
+                            <li>目星 <span class="espkit__badge espkit__badge--sub">70%</span></li>
+                            <li>
+                                聞き耳
+                                <span class="espkit__badge espkit__badge--sub">65%</span>
+                            </li>
+                            <li>
+                                図書館
+                                <span class="espkit__badge espkit__badge--sub">35%</span>
+                            </li>
+                            <li>
+                                心理学
+                                <span class="espkit__badge espkit__badge--sub">35%</span>
+                            </li>
+                            <li>回避 <span class="espkit__badge espkit__badge--sub">65%</span></li>
+                            <li>
+                                隠れる
+                                <span class="espkit__badge espkit__badge--sub">55%</span>
+                            </li>
+                            <li>
+                                忍び歩き
+                                <span class="espkit__badge espkit__badge--sub">50%</span>
+                            </li>
+                            <li>
+                                応急手当
+                                <span class="espkit__badge espkit__badge--sub">65%</span>
+                            </li>
+                            <li>跳躍 <span class="espkit__badge espkit__badge--sub">50%</span></li>
+                            <li>登攀 <span class="espkit__badge espkit__badge--sub">45%</span></li>
+                            <li>説得 <span class="espkit__badge espkit__badge--sub">40%</span></li>
+                            <li>
+                                オカルト
+                                <span class="espkit__badge espkit__badge--sub">15%</span>
+                            </li>
+                        </ul>
+                        <div class="espkit__m-bs--lg">
+                            <p>ここにはプロフィールのコンテンツが入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ▲ プロフィールブロック ▲ -->
+            </div>
+        </section>
+
+        <section>
+            <h2>
+                Shelf (本棚)
+                <a
+                    href="https://espace-uk.i-ra.site/docs/units/shelf"
+                    class="document"
+                    >公式ドキュメント</a
+                >
+            </h2>
+            <p class="espkit__font-size--sm">
+                <strong>Row Shelf (横組み本棚)</strong>
+            </p>
+            <div class="espkit__shelf">
+                <!-- ▼ アイテムブロック ▼ -->
+                <div>
+                    <div>
+                        <img
+                            src="https://images.unsplash.com/photo-1564327368633-151ef1d45021?w=300"
+                        />
+                    </div>
+                    <div>
+                        <div class="espkit__shelf_title">タイトル</div>
+                        <p>ここには本棚のコンテンツが入ります。</p>
+                        <p>
+                            <a class="espkit__btn">詳細</a>
+                            <a class="espkit__btn espkit__btn--sub">通販</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- ▲ アイテムブロック ▲ -->
+
+                <!-- ▼ アイテムブロック ▼ -->
+                <div>
+                    <div>
+                        <img
+                            src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=300"
+                        />
+                    </div>
+                    <div>
+                        <div class="espkit__shelf_title">タイトル</div>
+                        <p>ここには本棚のコンテンツが入ります。</p>
+                        <p>
+                            <a class="espkit__btn">詳細</a>
+                            <a class="espkit__btn espkit__btn--sub">通販</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- ▲ アイテムブロック ▲ -->
+            </div>
+
+            <p class="espkit__font-size--sm">
+                <strong>Column Shelf (縦組み本棚)</strong>
+            </p>
+            <div class="espkit__shelf espkit__shelf--column">
+                <!-- ▼ アイテムブロック ▼ -->
+                <div>
+                    <div>
+                        <img
+                            src="https://images.unsplash.com/photo-1564327368633-151ef1d45021?h=500"
+                        />
+                    </div>
+                    <div>
+                        <div class="espkit__shelf_title">タイトル</div>
+                        <p>ここには本棚のコンテンツが入ります。</p>
+                        <p>
+                            <a class="espkit__btn">詳細</a>
+                            <a class="espkit__btn espkit__btn--sub">通販</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- ▲ アイテムブロック ▲ -->
+
+                <!-- ▼ アイテムブロック ▼ -->
+                <div>
+                    <div>
+                        <img
+                            src="https://images.unsplash.com/photo-1511920170033-f8396924c348?h=500"
+                        />
+                    </div>
+                    <div>
+                        <div class="espkit__shelf_title">タイトル</div>
+                        <p>ここには本棚のコンテンツが入ります。</p>
+                        <p>
+                            <a class="espkit__btn">詳細</a>
+                            <a class="espkit__btn espkit__btn--sub">通販</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- ▲ アイテムブロック ▲ -->
+            </div>
+        </section>
+
+        <section>
+            <h2>
+                Thumbnail (サムネイル)
+                <a
+                    href="https://espace-uk.i-ra.site/docs/units/thumbnail"
+                    class="document"
+                    >公式ドキュメント</a
+                >
+            </h2>
+            <div class="espkit__thumbnail">
+                <!-- ▼ サムネイルブロック ▼ -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1464564531096-f0163633a18a?h=400" />
+                </div>
+                <!-- ▲ サムネイルブロック ▲ -->
+
+                <!-- ▼ サムネイルブロック ▼ -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1506543277633-99deabfcd722?h=400" />
+                </div>
+                <!-- ▲ サムネイルブロック ▲ -->
+
+                <!-- ▼ サムネイルブロック ▼ -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1597696929736-6d13bed8e6a8?h=400" />
+                </div>
+                <!-- ▲ サムネイルブロック ▲ -->
+
+                <!-- ▼ サムネイルブロック ▼ -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1610300034180-d55d519ca946?h=400" />
+                </div>
+                <!-- ▲ サムネイルブロック ▲ -->
+
+                <!-- ▼ サムネイルブロック ▼ -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1694967336899-d6d8b08932bf?h=400" />
+                </div>
+                <!-- ▲ サムネイルブロック ▲ -->
+
+                <!-- ▼ サムネイルブロック ▼ -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?h=400" />
+                </div>
+                <!-- ▲ サムネイルブロック ▲ -->
+
+                <!-- ▼ サムネイルブロック ▼ -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1750094486377-749cb4244953?h=400" />
+                </div>
+                <!-- ▲ サムネイルブロック ▲ -->
+            </div>
+        </section>
+
+        <footer>
+            <p>Ⓒ2026 ira.</p>
+        </footer>
+
+        <!-- espkit: JavaScriptの読み込み（JavaScriptが必要な機能を使用する場合） -->
+        <!-- <script src="espkit-v0.9.0-beta/espkit-all.min.js"></script> -->
+    </body>
+</html>
