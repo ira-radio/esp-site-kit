@@ -1,5 +1,5 @@
 /*!
- * espace Unit Kit v0.9.1-beta
+ * espace Unit Kit v0.9.2-beta
  * (c) 2026 ira.
  * * [License]
  * This software is subject to the Terms of Service of espace:
